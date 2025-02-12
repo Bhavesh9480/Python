@@ -68,14 +68,48 @@ for i in range(1,n+1):
      if (n%i==0):
         print(i,"is a factor")'''
 
-def factor(x):
+'''def factor(x):
     if(x==1):
         return 1
     else:
         return x*factor(x-1)
     
 n=int(input("Enter a number : "))
-print("Factorial of",n,"is",factor(n))  # Output: Factorial of
+print("Factorial of",n,"is",factor(n))  # Output: Factorial of'''
 
-
+'''def prime(x):
+    if(x==1):
+        return False
+    for i in range(2,x):
+        if(x%i==0):
+            return False
+        return True
+n=int(input("Enter a number to check prime or not : "))
+print("Prime or not",prime(n))  # Output: Prime or not'''
    
+def isprime(x):
+    if(x==1):
+        return False
+    for i in range(2,x):
+        if(x%i==0):
+            return False
+    return True
+
+def prime(n):
+    (count,i,plist)=(0,1,[])
+    if(n==1):
+        return False
+    
+    else:
+        while count<n:
+            if isprime(i):
+                (count,plist)=(count+1,plist+[i])
+            i+=1
+    return plist
+
+n=int(input("Enter range to check prime numbers : "))
+print("This are the ",n,"Prime numbers ",prime(n))
+
+
+
+
