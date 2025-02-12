@@ -29,7 +29,7 @@ print(f(8538))'''
 print(h(61)-h(60))  # Output: 4
 print(h(60))  # Output: 4'''
 
-#age=(input('Age :'))
+'''#age=(input('Age :'))
 #print (age)  # Output: Age :
 marks=[11,22,143 ,15,19,17]
 print(marks)
@@ -42,4 +42,40 @@ print(marks[2])
 marks.reverse()
 #print(marks.sort())
 marks.pop(2)
-print(marks)
+print(marks)'''
+
+'''movies=[]
+mov1=input("Enter Movie :")
+mov2=input("Enter Movie :")
+mov3=input("Enter Movie :")
+movies.append(mov1)
+movies.append(mov2)
+movies.append(mov3)
+
+print(movies)'''
+
+'''list1=[1,2,1]
+list2=[3,5,6]
+copylist2=list2.copy()
+copylist2.reverse()
+if (copylist2==list1):
+        print("True") 
+else:
+       print("False")'''
+
+'''n=int(input("Enter a number : "))
+for i in range(1,n+1):
+     if (n%i==0):
+        print(i,"is a factor")'''
+
+def factor(x):
+    if(x==1):
+        return 1
+    else:
+        return x*factor(x-1)
+    
+n=int(input("Enter a number : "))
+print("Factorial of",n,"is",factor(n))  # Output: Factorial of
+
+
+   
