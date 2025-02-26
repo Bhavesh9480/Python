@@ -87,7 +87,7 @@ print("Factorial of",n,"is",factor(n))  # Output: Factorial of'''
 n=int(input("Enter a number to check prime or not : "))
 print("Prime or not",prime(n))  # Output: Prime or not'''
    
-def isprime(x):
+'''def isprime(x):
     if(x==1):
         return False
     for i in range(2,x):
@@ -108,8 +108,61 @@ def prime(n):
     return plist
 
 n=int(input("Enter range to check prime numbers : "))
-print("This are the ",n,"Prime numbers ",prime(n))
+print("This are the ",n,"Prime numbers ",prime(n))'''
 
 
+'''x = ["hair",[23,4],2,"pin",[5]] # Statement 1
+y = x[0:8]                      # Statement 2
+z = x                           # Statement 3
+w = y                           # Statement 4
+z[4] = 10                       # Statement 5
+y[3] = y[3][0:3] + 'k'          # Statement 6
+y[1][2:3] = [5,8]               # Statement 7
+w[4][0] = 1000                  # Statement 8
+print(w)
+#x[4] = 0                     # Statement 9
+#a = (x[4] == 4)              # Statement 10'''
 
+'''def reverse_words_order_and_swap_cases(sentence):
+    # Write your code here
+   reversed_string=sentence[::-1]
+   result=""
+   for char in reversed_string:
+        if char==" ":
+            result+=" "
+        elif char.isupper():
+            result+=char.lower()
+        else:
+             result+=char.upper()
+   return result'''
+      
+'''import time
+import winsound
 
+frequency=1000
+duration=5000
+print("Start sleeping")
+time.sleep(10)
+winsound.Beep(frequency,duration)
+print("Wake up")'''
+
+#Binary Search
+def binary_search(list,target):
+    low=0
+    high=len(list)-1
+    while low<=high:
+        mid=(low+high)//2
+        if mid==target:
+            return mid
+        elif mid<target:
+            low=mid+1
+        elif mid>target:
+            high=mid-1
+    
+    return -1
+
+list=list(range(15))
+target=int(input("Enter target from 0 to 15 : "))
+
+result=binary_search(list,target)
+print(result)
