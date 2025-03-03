@@ -147,7 +147,7 @@ winsound.Beep(frequency,duration)
 print("Wake up")'''
 
 #Binary Search
-def binary_search(list,target):
+'''def binary_search(list,target):
     low=0
     high=len(list)-1
     while low<=high:
@@ -165,4 +165,14 @@ list=list(range(15))
 target=int(input("Enter target from 0 to 15 : "))
 
 result=binary_search(list,target)
-print(result)
+print(result)'''
+
+#Pandas
+import pandas as pd
+#s=pd.Series([1,2,3,4,5])
+#df=pd.DataFrame({"Names":["Bhavesh","Suthar","Is","Food","Boy"],"Marks":[20,21,24,12,65]})
+df=pd.read_excel("Python/my1.xlsx")
+print(df)
+#df.info()
+#print(df[["animal_name","hair"]])
+print(df.iloc[22])
