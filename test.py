@@ -171,8 +171,8 @@ print(result)'''
 import pandas as pd
 #s=pd.Series([1,2,3,4,5])
 #df=pd.DataFrame({"Names":["Bhavesh","Suthar","Is","Food","Boy"],"Marks":[20,21,24,12,65]})
-df=pd.read_excel("Python/my1.xlsx")
+#df=pd.read_excel("Python/my1.xlsx")
+df=pd.read_csv("Python/my1.csv")
 print(df)
 #df.info()
 #print(df[["animal_name","hair"]])
-print(df.iloc[22])
