@@ -165,7 +165,7 @@ list=list(range(15))
 target=int(input("Enter target from 0 to 15 : "))
 
 result=binary_search(list,target)
-print(result)'''
+print(result)
 
 #Pandas
 import pandas as pd
@@ -175,4 +175,5 @@ import pandas as pd
 df=pd.read_csv("Python/my1.csv")
 print(df)
 #df.info()
-#print(df[["animal_name","hair"]])
+#print(df[["animal_name","hair"]])'''
+print("Hello world")
