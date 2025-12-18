@@ -10,7 +10,7 @@ def create_socket():
         global host
         global port 
         global s 
-        host=""
+        host="0.0.0.0"
         port=9999
         s=socket.socket()
     except socket.error as msg:
@@ -34,10 +34,11 @@ def bind_socket():
 
 #Establish connection with a clinet (Socket is listning)
 
-def scoket_accept():
-    conn,address=s.accept()
-    print("Connection has been established"+"IP"+address[0] + "|" + "Port"+str(address[1]))
-    send_command(conn)
+def socket_accept():
+    while True:
+        conn,address=s.accept()
+        print("Connection has been established | "+"IP : "+address[0] + " | " + "Port "+str(address[1]))
+        send_command(conn)
     conn.close()
 
 #Give defination for "send_command" function
@@ -49,7 +50,7 @@ def send_command(conn):
             s.close()
             sys.exit()
         if len(str.encode(cmd))>0:
-            conn.send(str.emcode(cmd))
+            conn.send(str.encode(cmd))
             clinet_response=str(conn.recv(1024),"utf-8")
             print(clinet_response, end="")
 
@@ -57,7 +58,7 @@ def send_command(conn):
 def main():
     create_socket()
     bind_socket()
-    scoket_accept()
+    socket_accept()
 
 main()
 
